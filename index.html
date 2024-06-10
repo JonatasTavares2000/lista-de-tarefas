@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LISTA DE TAREFAS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+
+        body {
+            font-family: sans-serif;
+            background-color: #81e7dc;
+            background-image: linear-gradient(39deg, transparent, #fff);
+            margin: 0; /* Remove a margem padrão do body */
+            padding: 0; /* Remove o padding padrão do body */
+            background-image: url('caminho/para/sua-imagem.jpg'); /* Caminho para sua imagem */
+            background-size: cover; /* Faz com que a imagem cubra todo o body */
+            background-position: center; /* Centraliza a imagem */
+            background-repeat: no-repeat; /* Impede que a imagem se repita */
+            width: 100%; /* Garante que o body ocupe 100% da largura */
+            height: 100vh; /* Garante que o body ocupe 100% da altura da viewport */
+            margin: 38px;
+        }
+        .lista {
+            margin-left: 60px;
+            font-size: 40px;
+            display: flex;
+        }
+
+        .linha-2 {
+            font-weight: bold;
+            width: 160px;
+            background-color: white;
+            font-size: 12pt;
+            border: none;
+            padding-top: 9px;
+            padding-bottom: 9px;
+            padding-left: 12px;
+            padding-right: 12px;
+            border-radius: 16px;
+            margin-left: 30px;
+            margin-top: 35px;
+        }
+
+        .adicionar-tarefas {
+            font-weight: bold;
+            border: none;
+            font-size: 12pt;
+            background-color: yellow;
+            border-radius: 16px;
+            padding-top: 9px;
+            padding-bottom: 9px;
+            padding-left: 12px;
+            padding-right: 12px;
+            margin-left: 30px;
+            cursor: pointer;
+        }
+
+        .img-2 img {
+            height: 45px;
+            display: flex;
+            margin-right: 7px;
+        }
+
+        .img-2 {
+            display: flex;
+            align-items: center;
+        }
+
+        .tabela-central {
+            margin-left: 57px;
+        }
+
+        .tabela-final {
+            font-weight: bold;
+        }
+        /* .titulo th{
+            border-bottom: 1px solid #000;
+            margin: 0;
+            border-collapse: collapse;
+        } */
+
+        table{
+        border: 1px solid transparent;
+        border-collapse: collapse;
+        width: 40%;
+        margin-left: 8px;
+        }
+        th {
+            border-bottom: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        td {
+        padding-top: 10px; 
+        padding-bottom:10px;
+        text-align: center;
+        border-bottom: 1px solid rgba(179, 161, 161, 0.418);
+        }
+
+        .btn-editar {
+            border: none;
+            background-color: transparent;
+        }
+
+        .btn-excluir {
+            border: none;
+            background-color: transparent;
+        }
+
+        .fa-trash {
+            font-size: 25px;
+            color: blue;
+        }
+        .fa-pencil-square-o{
+            font-size: 25px;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="lista">
+        <div class="img-2">
+            <img src="logo.png">
+        </div>
+        <div>
+            <header>LISTA DE TAREFAS APP</header>
+        </div>
+    </div>
+
+    <div class="barras">
+        <tr>
+            <td><input type="text" id="tarefasNome" placeholder="Nome da tarefa" class="linha-2"></td>
+            <td><input type="text" id="tarefasStatus" placeholder="Status" class="linha-2"></td>
+            <td><input type="text" id="tarefaData" placeholder="Data" class="linha-2"></td>
+            <button class="adicionar-tarefas">Adicionar</button>            
+        </tr>
+    </div>
+    <br>
+    <br>
+
+    <!-- <div class="tabela-central"> -->
+        <table>
+        <tr class="titulo">
+            <th>DATA</th> <th>NOME</th> <th>STATUS</th> <th>EDITAR</th> <th>EXCLUIR</th>
+        </tr>
+    <!-- </div>
+ 
+    <div class="tabela-final"> -->
+        <tr class="example">
+            <td>05/05/24</td>
+            <td>Estudar JavaScript</td>
+            <td>A fazer</td>
+            <td><button class="btn-editar"><i class="fa fa-trash " aria-hidden="true"></i></button></td>
+            <td><button class="btn-excluir"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button></td>
+        </tr>
+
+            <tr class="example">
+                <td>05/05/24</td>
+                <td>Estudar Banco de Dados</td>
+                <td>Fazendo</td>
+                <td><button class="btn-editar"><i class="fa fa-trash" aria-hidden="true"></i></button></td>
+                <td><button class="btn-excluir"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button></td>
+            </tr>
+            <tr class="example">
+                <td>06/05/24</td>
+                <td>Almoçar</td>
+                <td>Feito</td>
+                <td><button class="btn-editar"><i class="fa fa-trash" aria-hidden="true"></i></button></td>
+                <td><button class="btn-excluir"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button></td>
+            </tr>
+            <tr class="example">
+                <td>07/05/24</td>
+                <td>Dormir</td>
+                <td>A fazer</td>
+                <td><button class="btn-editar"><i class="fa fa-trash" aria-hidden="true"></i></button></td>
+                <td><button class="btn-excluir"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button></td>
+            </tr>
+        </table>
+</body>
+</html>
